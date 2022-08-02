@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+<html>
+    <head>
+        <title>Cehat</title>
+    </head>
+    <body>
+        {% block content %}
+        <div class='container'>
+                 <div class="card text-center">
+            <div class="card-header">
+              CREATE GROUP
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">create your own gruop for chatting</h5>
+              <form method='post' action='/group/'>
+                {% csrf_token %}
+                <input type='hidden' value='user.username' name='creator'/>
+                <input class='my-5' type='text' placeholder='Enter Group Name..' name='gruop_name'/><div></div>
+              <a href="/" class="btn mx-3" style='background-color:none; color:red;'>cancel</a><button class="btn btn-primary" type='submit'>Add</botton>
+              </form>
+              </div>
+              <div  class="card-footer text-muted">
+                {% for i in messages %}
+                <span style='color:red'>{{i}}</span>
+                {% endfor %}
+                
+              </div>
+          </div>
+        </div>
+        
+        {% endblock%}
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+<html>
+    <head>
+        <title>Cehat</title>
+    </head>
+    <body>
+        {% block content %}
+
+        <div class='col-md-6 container mt-5'>
+            
+
+<form method='post'>
+  {% csrf_token %}
+
+  <h1>Login</h1>
+
+  {% for i in messages %}
+  <span style='color:red'> {{i}}</span>
+  {% endfor %}
+    <!-- Email input -->
+    <div class="form-outline mb-4 ">
+      <label class="form-label" for="form2Example1">username</label>
+      <input type="text" name='username' id="form2Example1" class="form-control" />
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example2">Password</label>
+      <input type="password" name='password' id="form2Example2" class="form-control" />
+    </div>
+    <!-- Submit button -->
+    <button style='width:100px;' type="submit" class="btn btn-primary btn-block mb-4">Login</button>
+  
+    <!-- 2 column grid layout for inline styling -->
+    <div class="row mb-4">
+      <div class="col d-flex justify-content-center">
+        <!-- Checkbox -->
+        <div class="form-check">
+          <label class="form-check-label" for="form2Example31"> Are you a new member ? </label>
+        </div>
+      </div>
+  
+      <div class="col">
+        <!-- Simple link -->
+        <a href="/signup">Register</a>
+      </div>
+    </div>
+  
+  
+  
+  </form>
+  
+  
+        </div>
+
+        {% endblock %}
+
+
+
+
+    </body>
+</html>

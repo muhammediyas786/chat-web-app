@@ -1,0 +1,69 @@
+{% extends 'base.html'%}
+<html>
+    <head>
+        <title>Cehat</title>
+    </head>
+    <body>
+        {% block content %}
+
+
+        <section style="background-color: #eee; height:100%">
+            <div class="container">
+        
+                <div class="col-md-8 col-lg-7 col-xl-6">
+          
+                  <div class="card"  style="height:95%; border-radius: 15px;">
+                    <div
+                      class="card-header d-flex justify-content-between align-items-center p-3 bg-info text-white border-bottom-0"
+                      style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                      <i class="fas fa-angle-left"></i>
+                      {% for i in group_obj %}
+                      <p class="mb-0 fw-bold"><a href='/' style='text-decoration:none; color:white;'>Home</a> - {{i}}</p>
+                      {% endfor %}
+                      <i class="fas fa-times"></i>
+                    </div>
+                    <div class="card-body" style=' overflow-y: scroll; '>
+                      <div style='display: flex; flex-direction: column-reverse;'>
+                      {% for i in message_obj %}
+                      
+                      <div class="d-flex flex-row justify-content-start mb-4">
+                        <div class="p-3 ms-3" style=" border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
+                          <span><h6>{{i.senter}}</h6></span>
+                       
+                          <p class="small mb-0">{{i.msg}}</p>
+                        </div>
+                      </div>
+                      {% endfor %}
+                    
+                     
+                    </div>
+                    </div>
+                    <div class="form-outline">
+                      <form action='/message_senting/{{user.username}}' method='post'>
+                        {% csrf_token %}
+                        {% for i in group_obj %}
+                        <input type='hidden' name='group' value='{{i}}'/>
+                        {% endfor %}
+                      <textarea style='float:left;' class="mx-1 form-control w-75" name='text' placeholder='Messages' id="textAreaExample" rows="1"></textarea>
+                        <button class='btn btn-primary'><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                          <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
+                        </svg></button>
+                    </form>
+                    </div>
+                  </div>
+      
+          
+              </div>
+          
+            </div>
+          </section>
+
+        
+
+        {% endblock%}
+
+
+
+
+    </body>
+</html>
