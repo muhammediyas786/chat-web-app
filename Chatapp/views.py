@@ -49,7 +49,7 @@ def login(request):
 
 
 
-
+@login_required(login_url='login')
 def search(request):
     user_input = None
     query = None
@@ -61,7 +61,7 @@ def search(request):
     return render (request, 'search.html',{'output':user_input})
 
 
-
+@login_required(login_url='login')
 def exist_group(request):
     if request.method == 'POST':
         group_names = request.POST['gruop_name']
@@ -82,7 +82,7 @@ def exist_group(request):
         return redirect('search')
         
 
-
+@login_required(login_url='login')
 def create_group(request):
     if request.method == 'POST':
         print('hai')
@@ -100,14 +100,14 @@ def create_group(request):
         return render(request, 'group.html')
 
 
-
+@login_required(login_url='login')
 def Inner_group(request,pk):
     group_obj = Group.objects.filter(name=pk)
     message_obj = Message.objects.filter(group=pk)
     date = datetime.now().date()
     return render(request, 'inner_group.html',{'date':date, 'group_obj':group_obj,'message_obj':message_obj})
 
-
+@login_required(login_url='login')
 def message_senting(request, pk):
     if request.method == 'POST':
         senter = pk
