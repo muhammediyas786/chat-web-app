@@ -20,7 +20,7 @@ http://gpcaht.pythonanywhere.com/
 
 ## Home page
 
-![App Screenshot](https://github.com/muhammediyas786/chat-web-app/blob/master/images/Screenshot_20221104_094720.png)
+![App Screenshot](https://dashing-pika-0fa706.netlify.app/screenshots/chat-5.png)
 
 
 ## Chat screen
