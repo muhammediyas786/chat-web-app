@@ -25,25 +25,25 @@ http://gpcaht.pythonanywhere.com/
 
 ## Chat screen
 
-![App Screenshot](https://github.com/muhammediyas786/chat-web-app/blob/master/images/Screenshot_20221104_094458.png)
+![App Screenshot](https://dashing-pika-0fa706.netlify.app/screenshots/chat-4.png)
 
 
 ## Registration page
 
-![App Screenshot](https://github.com/muhammediyas786/chat-web-app/blob/master/images/Screenshot_20221104_092020.png)
+![App Screenshot](https://dashing-pika-0fa706.netlify.app/screenshots/chat-2.png)
 
 
 ## Login page
 
-![App Screenshot](https://github.com/muhammediyas786/chat-web-app/blob/master/images/Screenshot_20221104_092003.png)
+![App Screenshot](https://dashing-pika-0fa706.netlify.app/screenshots/chat-1.png)
 
 
 ## Group creation page
 
-![App Screenshot](https://github.com/muhammediyas786/chat-web-app/blob/master/images/Screenshot_20221104_092144.png)
+![App Screenshot](https://dashing-pika-0fa706.netlify.app/screenshots/chat-3.png)
 
 
 ## Search page
 
-![App Screenshot](https://github.com/muhammediyas786/chat-web-app/blob/master/images/Screenshot_20221104_095309.png)
+![App Screenshot](https://dashing-pika-0fa706.netlify.app/screenshots/chat-6.png)
 
