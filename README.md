@@ -15,7 +15,7 @@ This project is made for group chatting.
 
 ## Project
 
-https://chatwithdjango.herokuapp.com/
+http://gpcaht.pythonanywhere.com/
 
 
 ## Home page
